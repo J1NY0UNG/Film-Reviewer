@@ -12,10 +12,12 @@ links = soup.find_all('a', id='video-title')
 
 f = open("C:\\Users\\User\\Desktop\\ddolddol\\Review-Filmer\\linklist.txt", "w", encoding='utf-8')
 
-for n in titles:
-    f.write(n.text.strip())
+for k in titles:
+    f.write(k.text.strip())
+    f.write("\n")
 
 for l in links:
-    f.write('youtube.com' + l.get('href'))
+    f.write(l.get('href'))
+    f.write("\n")
 
 f.close
